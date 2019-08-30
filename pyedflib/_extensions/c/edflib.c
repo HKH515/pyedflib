@@ -3998,7 +3998,7 @@ int edfwrite_digital_short_samples(int handle, short *buf)
   {
     value = buf[i];
 
-    if(value>digmax)
+    /*if(value>digmax)
     {
       value = digmax;
     }
@@ -4006,7 +4006,7 @@ int edfwrite_digital_short_samples(int handle, short *buf)
     if(value<digmin)
     {
       value = digmin;
-    }
+    }*/
 
     fputc((value)&0xff, file);
 
@@ -4122,7 +4122,7 @@ int edfwrite_digital_samples(int handle, int *buf)
   {
     value = buf[i];
 
-    if(value>digmax)
+    /*if(value>digmax)
     {
       value = digmax;
     }
@@ -4130,7 +4130,7 @@ int edfwrite_digital_samples(int handle, int *buf)
     if(value<digmin)
     {
       value = digmin;
-    }
+    }*/
 
     fputc((value)&0xff, file);
 
@@ -4252,7 +4252,7 @@ int edf_blockwrite_digital_samples(int handle, int *buf)
     {
       value = buf[i + buf_offset];
 
-      if(value>digmax)
+      /*if(value>digmax)
       {
         value = digmax;
       }
@@ -4260,7 +4260,7 @@ int edf_blockwrite_digital_samples(int handle, int *buf)
       if(value<digmin)
       {
         value = digmin;
-      }
+      }*/
 
       fputc(value&0xff, file);
 
@@ -4383,7 +4383,7 @@ int edf_blockwrite_digital_short_samples(int handle, short *buf)
     {
       value = buf[i + buf_offset];
 
-      if(value>digmax)
+      /*if(value>digmax)
       {
         value = digmax;
       }
@@ -4391,7 +4391,7 @@ int edf_blockwrite_digital_short_samples(int handle, short *buf)
       if(value<digmin)
       {
         value = digmin;
-      }
+      }*/
 
       fputc(value&0xff, file);
 
@@ -4614,7 +4614,7 @@ int edfwrite_physical_samples(int handle, double *buf)
   {
     value = (buf[i] / bitvalue) - phys_offset;
 
-    if(value>digmax)
+    /*if(value>digmax)
     {
       value = digmax;
     }
@@ -4622,7 +4622,7 @@ int edfwrite_physical_samples(int handle, double *buf)
     if(value<digmin)
     {
       value = digmin;
-    }
+    }*/
 
     //fputc(value&0xff, file);
 
@@ -4769,7 +4769,7 @@ int edf_blockwrite_physical_samples(int handle, double *buf)
     {
       value = (buf[i + buf_offset] / bitvalue) - phys_offset;
 
-      if(value>digmax)
+      /*if(value>digmax)
       {
         value = digmax;
       }
@@ -4777,7 +4777,7 @@ int edf_blockwrite_physical_samples(int handle, double *buf)
       if(value<digmin)
       {
         value = digmin;
-      }
+      }*/
 
       //fputc(value&0xff, file);
       
